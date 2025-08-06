@@ -1,0 +1,10 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="utf-8"><title>Créer secteur</title></head>
+<body>
+<h1>Créer secteur</h1>
+<form th:action="@{/sectors}" th:object="${sector}" method="post">
+  <label>Nom: <input type="text" th:field="*{name}" /></label>
+  <button type="submit">Créer</button>
+</form>
+</body></html>

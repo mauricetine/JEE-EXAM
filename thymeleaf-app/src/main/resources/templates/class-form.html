@@ -1,0 +1,16 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="utf-8"><title>Créer classe</title></head>
+<body>
+<h1>Créer classe</h1>
+<form th:action="@{/classes}" th:object="${classe}" method="post">
+  <label>Nom: <input type="text" th:field="*{className}" /></label><br/>
+  <label>Description: <input type="text" th:field="*{description}" /></label><br/>
+  <label>Secteur:
+    <select th:field="*{sectorId}">
+      <option th:each="s : ${sectors}" th:value="${s.id}" th:text="${s.name}">Secteur</option>
+    </select>
+  </label><br/>
+  <button type="submit">Créer</button>
+</form>
+</body></html>

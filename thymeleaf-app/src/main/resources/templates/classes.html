@@ -1,0 +1,16 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="utf-8"><title>Classes</title></head>
+<body>
+<h1>Liste des classes</h1>
+<a href="/classes/new">Créer une classe</a> | <a href="/sectors">Voir les secteurs</a>
+<table>
+  <tr><th>ID</th><th>Nom</th><th>Description</th><th>Secteur</th></tr>
+  <tr th:each="c : ${classes}">
+    <td th:text="${c.id}">1</td>
+    <td th:text="${c.className}">GL</td>
+    <td th:text="${c.description}">desc</td>
+    <td th:text="${c.sectorId}">1</td>
+  </tr>
+</table>
+</body></html>

@@ -1,0 +1,10 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="utf-8"><title>Sectors</title></head>
+<body>
+<h1>Liste des secteurs</h1>
+<a href="/sectors/new">Créer un secteur</a> | <a href="/classes">Voir les classes</a>
+<ul>
+  <li th:each="s : ${sectors}" th:text="${s.name}">Sector</li>
+</ul>
+</body></html>
