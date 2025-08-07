@@ -9,3 +9,4 @@ public class ThymeleafAppApplication {
         SpringApplication.run(ThymeleafAppApplication.class, args);
     }
 }
+     
